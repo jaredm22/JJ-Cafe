@@ -19,31 +19,37 @@ $dark-gray6: rgb(28, 28, 30);
   position: absolute;
 }
 
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.header-container {
     top: 0;
-    width: 100%;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
     border-bottom: 1px solid $dark-gray1;
     background: white;
-    // padding: 1rem;
 
-    ul { padding: 0; }
-
-    .header-item {
-        height: fit-content;
-        padding: 1em;
-        border: none;
-        background: none; 
-
-        &:hover {
-            color:mediumturquoise;
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1024px;
+        padding: 0 2rem;
+    
+        ul { padding: 0; }
+    
+        .header-item {
+            height: fit-content;
+            padding: 1em;
+            border: none;
+            background: none; 
+    
+            &:hover {
+                color:mediumturquoise;
+            }
         }
     }
 }
-
 
 .specials-area {
     height: fit-content;
@@ -55,7 +61,7 @@ $dark-gray6: rgb(28, 28, 30);
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: flex-start;
+        align-items: center;
         top: 0;
         width: 100%;
         max-width: 1280px;
@@ -73,14 +79,13 @@ $dark-gray6: rgb(28, 28, 30);
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            width: 100%;
         }
     
         .card {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            min-height: 220px;
+            min-height: 200px;
             max-width: 200px;
             padding: 1em;
             border-radius: 10px;
@@ -135,7 +140,7 @@ $dark-gray6: rgb(28, 28, 30);
     
         .menu-navigation {
             background: rgb(34, 34, 34);
-            border-radius: 0 5px 5px 0;
+            border-radius: 7px;
             height: 100%;
             width: 150px;
             display: flex;
@@ -174,7 +179,7 @@ $dark-gray6: rgb(28, 28, 30);
             .menu-item {
                 width: 100%;
                 height: fit-content;
-                padding: 1em 2em;
+                padding: 1em 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
