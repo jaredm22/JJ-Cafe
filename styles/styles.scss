@@ -118,6 +118,15 @@ $dark-gray6: rgb(28, 28, 30);
     padding: 2rem 0;
     border-bottom: 1px solid $dark-gray1;
 
+    .menu-container {
+        height: 100%;
+        max-width: 1024px;
+        display: grid;
+        grid-template-columns: 150px auto;
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+
     .menu-navigation-area {
         height: 100%;
         width: 100%;
@@ -128,7 +137,7 @@ $dark-gray6: rgb(28, 28, 30);
             background: rgb(34, 34, 34);
             border-radius: 0 5px 5px 0;
             height: 100%;
-            width: 200px;
+            width: 150px;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -145,14 +154,7 @@ $dark-gray6: rgb(28, 28, 30);
         }
     }
     
-    .menu-container {
-        height: 100%;
-        max-width: 1024px;
-        display: grid;
-        grid-template-columns: 200px auto;
-        margin: 0 auto;
-        padding: 1em 0;
-    }
+    
     
     .scroll-menu-area {
         height: 100%;
