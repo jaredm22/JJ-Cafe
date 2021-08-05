@@ -22,7 +22,7 @@ export default function MenuNavItem(props: Props) {
                 <h6>{props.item}</h6>
             </div>
             <ul>
-                {["Gyro", "Pizza", "Fries"].map(x => <p>{x}</p>)}
+                {["Gyro", "Pizza", "Fries"].map(x => <div key={props.i}><p>{x}</p></div>)}
             </ul>
         </div>
     )
