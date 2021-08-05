@@ -35,7 +35,7 @@ export default function Menu(props: any) {
 
                 <div className="scroll-menu-area">
                     <div className="scroll-menu">
-                        {["Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries"].map(x => <MenuItem/>)}
+                        {["Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries"].map((x,i) => <MenuItem key={i}/>)}
                     </div>
                 </div>
             </div>
