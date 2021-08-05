@@ -2,7 +2,7 @@ import Card from './Card';
 
 export default function WeeklySpecials() {
     return(
-        <div className="specials-area">
+        <div className="specials-container">
             <div className="weekly-specials-container">
                 <h1>Weekly Specials</h1>
 

@@ -1,11 +1,17 @@
 interface Props {
     i: number, 
     selected: boolean,
-    item: string
+    item: string,
+    selectHandler(i: number) : void,
 }
 
 export default function MenuNavItem(props: Props) {
     console.log(props.selected);
+
+    function onSelect() {
+        props.selectHandler(props.i);
+    }
+
     return(
         <div 
             className={`menu-nav-item ${props.selected ? "selected" : ""}`}
@@ -17,13 +23,10 @@ export default function MenuNavItem(props: Props) {
                         color: "white",
                         borderRight: "7px solid lightseagreen"
                     } : {}}
-                // onClick={() => setState({selected: props.i})}
+                onClick={onSelect}
             >
                 <h6>{props.item}</h6>
             </div>
-            <ul>
-                {["Gyro", "Pizza", "Fries"].map(x => <div key={props.i}><p>{x}</p></div>)}
-            </ul>
         </div>
     )
 }

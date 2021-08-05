@@ -26,16 +26,18 @@ export default function Menu(props: any) {
             <div className="menu-container">
                 <div className="menu-navigation-area">
                     <div className="menu-navigation">
-                        <MenuNavItem key={0} i={0} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem key={1} i={1} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem key={2} i={2} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem key={3} i={3} selected={state.selected === 0} item="Paninis"/>                       
+                        <MenuNavItem key={0} i={0} selectHandler={setSelected} selected={state.selected === 0} item="Breakfast"/>
+                        <MenuNavItem key={1} i={1} selectHandler={setSelected} selected={state.selected === 1} item="Sandwiches"/>
+                        <MenuNavItem key={2} i={2} selectHandler={setSelected} selected={state.selected === 2} item="Paninis and Wraps"/>
+                        <MenuNavItem key={3} i={3} selectHandler={setSelected} selected={state.selected === 3} item="Salads"/>
+                        <MenuNavItem key={4} i={4} selectHandler={setSelected} selected={state.selected === 4} item="Snacks"/>  
+                        <MenuNavItem key={5} i={5} selectHandler={setSelected} selected={state.selected === 5} item="Drinks"/>                       
                     </div>
                 </div>
 
                 <div className="scroll-menu-area">
                     <div className="scroll-menu">
-                        {["Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries", "Gyro", "Pizza", "Fries"].map((x,i) => <MenuItem key={i}/>)}
+                        {[...Array(12)].map((x,i) => <MenuItem key={i}/>)}
                     </div>
                 </div>
             </div>

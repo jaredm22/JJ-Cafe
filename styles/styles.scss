@@ -51,7 +51,7 @@ $dark-gray6: rgb(28, 28, 30);
     }
 }
 
-.specials-area {
+.specials-container {
     height: fit-content;
     width: 100%;
     border-bottom: 1px solid $dark-gray1;
@@ -126,31 +126,36 @@ $dark-gray6: rgb(28, 28, 30);
     .menu-container {
         height: 100%;
         max-width: 1024px;
-        display: grid;
-        grid-template-columns: 150px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
         padding: 1em 0;
     }
 
     .menu-navigation-area {
         height: 100%;
-        width: 100%;
-        display: flex;
-        overflow: hidden;
+        overflow: scroll;
+        flex-grow: 1;
     
         .menu-navigation {
             background: rgb(34, 34, 34);
             border-radius: 7px;
-            height: 100%;
-            width: 150px;
+            max-width: 220px;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
             overflow: scroll;
             padding-left: 0.5em;
     
             .menu-nav-item {
-                
+                width: 100%;
+                height: fit-content;
+                padding: 1em 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
             }
     
             .selected {
@@ -159,12 +164,11 @@ $dark-gray6: rgb(28, 28, 30);
         }
     }
     
-    
-    
     .scroll-menu-area {
         height: 100%;
         width: 100%;
-        overflow: hidden;
+        overflow: scroll;
+        flex-grow: 2;
     
         .scroll-menu {
             border-radius: 5px;
@@ -174,7 +178,7 @@ $dark-gray6: rgb(28, 28, 30);
             flex-direction: column;
             overflow: scroll;
             color: black;
-            padding: 1rem 2rem;
+            padding: 0 2rem 2rem;
         
             .menu-item {
                 width: 100%;
