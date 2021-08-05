@@ -26,14 +26,10 @@ export default function Menu(props: any) {
             <div className="menu-container">
                 <div className="menu-navigation-area">
                     <div className="menu-navigation">
-                        <MenuNavItem i={0} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem i={1} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem i={2} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem i={3} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem i={3} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem i={3} selected={state.selected === 0} item="Paninis"/>
-                        <MenuNavItem i={3} selected={state.selected === 0} item="Paninis"/>
-
+                        <MenuNavItem key={0} i={0} selected={state.selected === 0} item="Paninis"/>
+                        <MenuNavItem key={1} i={1} selected={state.selected === 0} item="Paninis"/>
+                        <MenuNavItem key={2} i={2} selected={state.selected === 0} item="Paninis"/>
+                        <MenuNavItem key={3} i={3} selected={state.selected === 0} item="Paninis"/>                       
                     </div>
                 </div>
 
