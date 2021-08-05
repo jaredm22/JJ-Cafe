@@ -136,17 +136,17 @@ $dark-gray6: rgb(28, 28, 30);
 
     .menu-navigation-area {
         height: 100%;
+        min-width: 180px;
         overflow: scroll;
-        flex-grow: 1;
+        overflow-x: hidden;
     
         .menu-navigation {
             background: rgb(34, 34, 34);
             border-radius: 7px;
-            max-width: 220px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             overflow: scroll;
-            padding-left: 0.5em;
     
             .menu-nav-item {
                 width: 100%;
@@ -156,6 +156,10 @@ $dark-gray6: rgb(28, 28, 30);
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
+
+                [class^="item-"] {
+                    padding: 0 1em;
+                }
             }
     
             .selected {
@@ -168,7 +172,6 @@ $dark-gray6: rgb(28, 28, 30);
         height: 100%;
         width: 100%;
         overflow: scroll;
-        flex-grow: 2;
     
         .scroll-menu {
             border-radius: 5px;
