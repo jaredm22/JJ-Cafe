@@ -15,18 +15,10 @@ export default function MenuNavItem(props: Props) {
     return(
         <div 
             className={`menu-nav-item ${props.selected ? "selected" : ""}`}
+            id={props.item}
+            onClick={onSelect}
         >
-            <div 
-                className={`item-${props.i}`}
-                style={props.selected ? 
-                    {
-                        color: "white",
-                        borderRight: "7px solid lightseagreen"
-                    } : {}}
-                onClick={onSelect}
-            >
-                <h6>{props.item}</h6>
-            </div>
+            <p>{props.item}</p>
         </div>
     )
 }

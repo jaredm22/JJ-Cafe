@@ -9,7 +9,7 @@ export default function Card(props: Props) {
                 <h4>{props.day}</h4>
             </div>
             <div className="card-bottom">
-                <h2>Chicken Parm</h2>
+                <h4>Chicken Parm</h4>
                 <p>Breaded chicken topped with marinara and parmesan and served on a brioche roll.</p>
             </div>
         </div>

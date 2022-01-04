@@ -12,6 +12,18 @@ $dark-gray4: rgb(58, 58, 60);
 $dark-gray5: rgb(44, 44, 46);
 $dark-gray6: rgb(28, 28, 30);
 
+$orange: rgb(251, 58, 29);
+$tan: rgb(247, 240, 223);
+
+$blue: rgb(104,144,197);
+$jet: #333333;
+$rich-black: rgb(13, 31, 45);
+$green-crayola: #0DAB76;
+$mountain-meadow: #02C39A;
+$light-cyan: #CDF7F6;
+
+$electric-blue: #2C75FF;
+
 .App {
   background: white;
   height: 100%;
@@ -22,10 +34,21 @@ $dark-gray6: rgb(28, 28, 30);
 .header-container {
     top: 0;
     display: flex;
+    position: fixed;
+    height: 90px;
     width: 100vw;
     justify-content: center;
-    border-bottom: 1px solid $dark-gray1;
-    background: white;
+    background: $rich-black;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+        font-family: "Phosphate";
+        color: white;
+        font-weight: 400;
+
+        &:hover {color: $blue}
+    }    
 
     .header {
         display: flex;
@@ -37,22 +60,15 @@ $dark-gray6: rgb(28, 28, 30);
         padding: 0 2rem;
     
         ul { padding: 0; }
-    
-        .header-item {
-            height: fit-content;
-            padding: 1em;
-            border: none;
-            background: none; 
-    
-            &:hover {
-                color:mediumturquoise;
-            }
-        }
     }
 }
 
 .specials-container {
     height: fit-content;
+    height: 60vh;
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
     width: 100%;
     border-bottom: 1px solid $dark-gray1;
 
@@ -85,27 +101,35 @@ $dark-gray6: rgb(28, 28, 30);
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            min-height: 200px;
+            min-height: 100px;
             max-width: 200px;
-            padding: 1em;
-            border-radius: 10px;
-            background: none; 
+            // padding: 1em;
+            border-radius: 0 0 5px 5px;
+            background: whitesmoke; 
             margin: 0.5rem;
-            box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+            box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+            // border-top: 5px solid $blue;
     
             .card-top {
                 height: 100%;
                 width: 100%;
-                padding: 0.5rem 0;
-                border-bottom: 1px solid black;
+                color:rgb(13, 31, 45);
+                background: $light-cyan;
+                padding: 1em;
+
+                h4 { color:hsla(0, 0%, 1000%, 0.86)}
             }
     
             .card-bottom {
                 height: 100%;
                 width: 100%;
     
-                h2 {
+                h4 {
                     margin: 1rem 0;
+                }
+
+                p {
+                    font-size: small;
                 }
             }
         }
@@ -122,12 +146,14 @@ $dark-gray6: rgb(28, 28, 30);
     align-items: center;
     padding: 2rem 0;
     border-bottom: 1px solid $dark-gray1;
+    background: rgb(34, 34, 34);
+    color: white;
 
     .menu-container {
         height: 100%;
         max-width: 1024px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
@@ -135,8 +161,8 @@ $dark-gray6: rgb(28, 28, 30);
     }
 
     .menu-navigation-area {
-        height: 100%;
-        min-width: 180px;
+        height: 150px;
+        min-width: 500px;
         overflow: scroll;
         overflow-x: hidden;
     
@@ -145,48 +171,56 @@ $dark-gray6: rgb(28, 28, 30);
             border-radius: 7px;
             width: 100%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             overflow: scroll;
+            align-items: center;
+            
     
             .menu-nav-item {
                 width: 100%;
                 height: fit-content;
-                padding: 1em 0;
+                padding: 1em 0.5em;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: flex-start;
+                text-align: center;
+                
 
                 [class^="item-"] {
-                    padding: 0 1em;
+                    padding-left: 0.5em;
+                    padding-right: 1em;
+                    text-align: center;
                 }
             }
     
             .selected {
                 color: white;
+                border-bottom: 5px solid $blue;
             }
         }
     }
     
     .scroll-menu-area {
-        height: 100%;
+        // height: fit-content;
         width: 100%;
-        overflow: scroll;
+        // overflow: scroll;
+        color: white;
     
         .scroll-menu {
             border-radius: 5px;
-            max-height: 100%;
+            height: fit-content;
             width: 100%;
             display: flex;
-            flex-direction: column;
-            overflow: scroll;
-            color: black;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
             padding: 0 2rem 2rem;
         
             .menu-item {
-                width: 100%;
+                width: 250px;
                 height: fit-content;
                 padding: 1em 0;
+                margin: 0.5rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -199,14 +233,17 @@ $dark-gray6: rgb(28, 28, 30);
                     justify-content: space-between;
                     align-items: center;
                     padding-bottom: 0.5em;
+                    font-size: 10pt;
                 }
         
-                .menu-item-top {
+                .menu-item-bottom {
                     width: 100%;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
+                    color: hsla(0, 0%, 29%);
+                    font-size: 10pt;
                 }
             }
         }    
@@ -214,27 +251,42 @@ $dark-gray6: rgb(28, 28, 30);
 }
 
 
+ /* The Overlay (background) */
+ 
+ .overlay {
+    position: relative;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
 
-// .menu-card {
-//   border-radius: 5px 0 0 5px;
-//   height: 600px;
-//   width: 500px;
-//   background: rgb(34, 34, 34);
-//   display: flex;
-//   flex-direction: column;
-//   /* justify-content: space-evenly; */
-//   overflow: scroll;
-// }
+}
 
-// .menu-item {
-//   position: relative;
-//   height: 40px;
-//   width:  100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   box-sizing: border-box;
-// }
+.overlay-content {
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    .header-item {
+        height: fit-content;
+        padding: 1em;
+        border: none;
+        background: none; 
+        color: white;
+        font-weight: 300;
+        font-size: 20px;
+        font-family: "Phosphate";
+
+
+        a:hover {
+            color:$blue;
+        }
+    }
+}
+  
 
 [class^="item-"],
 [class*=" item-"] {
@@ -250,4 +302,95 @@ $dark-gray6: rgb(28, 28, 30);
 }
 
 
+@media only screen and (max-width: 550px) {
+
+    .menu-icon {
+        position: relative;
+        height: 30px;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+        
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+                
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    }
+
+    .overlay {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+        // height: calc(100% - 180px);
+        width: 100%;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 90px;
+        background-color: $rich-black; /* Black fallback color */
+        overflow-x: hidden; /* Disable horizontal scroll */
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        // transition: .5s;
+
+            /* Position the content inside the overlay */
+        .overlay-content {
+            position: relative;
+            width: 100%; /* 100% width */
+            display: flex;
+            flex-direction: column;
+            transition: transform 600ms cubic-bezier(.4,0,.2,1);
+            transform: translateX(0%);
+            font-family: "Phosphate";
+            overflow-x: hidden;
+
+            .header-item {
+                height: fit-content;
+                padding: 1em;
+                border: none;
+                background: none; 
+                color: white;
+                font-weight: 500;
+                font-family: "Phosphate";
+                
+            }
+
+            a:hover {
+                color:$blue;
+            }
+        }
+    }
+    
+    .overlay-footer {
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $rich-black;
+
+        p {
+            font-size: 8pt;
+            color: hsl(0%, 0%, 45%);
+            font-weight: 400;
+        }
+    }
+}
 
